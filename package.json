@@ -4,5 +4,11 @@
   "description": "A simple notes app, so that I can learn how to set up and run a project in ES6, using jest for test driven development",
   "main": "index.js",
   "author": "Liz Daly <liz7daly@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
 }

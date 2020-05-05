@@ -10,10 +10,24 @@ Documenting my steps below, so I can easily refer back. Feel free to clone and h
 - `brew install yarn`
 - `yarn`
 
-## How I set it up
+## How I set it up - step by step
 
+1. Initialise a yarn project: `yarn init`
+2. Set up Jest for testing: `yarn add --dev jest`
+3. Create a basic test ('sum.test.js') and js function ('sum.js') to test jest set up.
+4. Add the following to package.json
+
+```json
+"scripts": {
+    "test": "jest"
+  }
 ```
-yarn init
-```
+
+5. Run `yarn test` and receive a PASS (testing Jest running as expected)
+6. Delete test files
+7. Run `jest --init` to create jest configuration file
+
+
+
 
 
