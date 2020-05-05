@@ -26,6 +26,8 @@ Documenting my steps below, so I can easily refer back. Feel free to clone and h
 5. Run `yarn test` and receive a PASS (testing Jest running as expected)
 6. Delete test files
 7. Run `jest --init` to create jest configuration file
+8. Run `yarn add --dev babel-jest @babel/core @babel/cli @babel/preset-env` to set up babel
+  
 
 
 
