@@ -14,5 +14,8 @@
   },
   "scripts": {
     "test": "jest"
+  },
+  "dependencies": {
+    "core-js": "2"
   }
 }
