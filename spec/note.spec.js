@@ -1,4 +1,4 @@
-import Note from '../src/note-model.js'
+import Note from '../src/modules/note'
 
 describe('Note model', () => {
   let note
