@@ -1,6 +1,6 @@
-import Note from '../src/modules/note'
+import Note from '../../src/modules/note'
 
-describe('Note model', () => {
+describe('Note', () => {
   let note
 
   beforeEach(() => {

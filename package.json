@@ -13,7 +13,8 @@
     "jest": "^26.0.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "babel src -d lib"
   },
   "dependencies": {
     "core-js": "2"
