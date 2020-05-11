@@ -1,4 +1,5 @@
 import NoteList from '../../src/modules/noteList'
+import Note from '../../src/modules/note'
 
 describe('Note List', () => {
   let noteList
@@ -11,8 +12,17 @@ describe('Note List', () => {
     expect(noteList.notes.length).toBe(0)
   })
 
-  it('stores a new note', () => {
-    noteList.createNote('My favourite language is JavaScript')
-    expect(noteList.notes[0].text).toEqual('My favourite language is JavaScript')
+  describe('#createNote', () => {
+    beforeEach(() => {
+      noteList.createNote('My favourite language is JavaScript')
+    })
+
+    it('stores a new note', () => {
+      expect(noteList.notes[0].text).toEqual('My favourite language is JavaScript')
+    })
+
+    it('stored note is an instance of note model', () => {
+      expect(noteList.notes[0]).toBeInstanceOf(Note)
+    })
   })
 })
