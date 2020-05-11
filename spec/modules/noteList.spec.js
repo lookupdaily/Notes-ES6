@@ -3,10 +3,12 @@ import NoteList from '../../src/modules/noteList'
 
 
 describe('Note List', () => {
-  let noteList
-
+  let noteList;
+  let note;
+  
   beforeEach(() => {
-    noteList = new NoteList()
+    note = jest.fn() 
+    noteList = new NoteList(Note)
   })
 
   it('is instantiated with an empty array of notes', () => {
@@ -14,12 +16,13 @@ describe('Note List', () => {
   })
 
   describe('#createNote', () => {
+
     beforeEach(() => {
       noteList.createNote('My favourite language is JavaScript')
     })
 
     it('stores a new note', () => {
-      expect(noteList.notes[0].text).toEqual('My favourite language is JavaScript')
+      expect(noteList.notes.length).toBe(1)
     })
 
     it('stored note is an instance of note model', () => {
