@@ -8,7 +8,7 @@ describe('Note List', () => {
   
   beforeEach(() => {
     note = jest.fn() 
-    noteList = new NoteList(Note)
+    noteList = new NoteList(note)
   })
 
   it('is instantiated with an empty array of notes', () => {
@@ -26,7 +26,7 @@ describe('Note List', () => {
     })
 
     it('stored note is an instance of note model', () => {
-      expect(noteList.notes[0]).toBeInstanceOf(Note)
+      expect(noteList.notes[0]).toBeInstanceOf(note)
     })
   })
 })
