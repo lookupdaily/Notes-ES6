@@ -1,5 +1,6 @@
-import NoteList from '../../src/modules/noteList'
 import Note from '../../src/modules/note'
+import NoteList from '../../src/modules/noteList'
+
 
 describe('Note List', () => {
   let noteList

@@ -1,16 +1,17 @@
 import Note from './note'
 
 class NoteList {
-  constructor() {
+  constructor(noteModel = Note) {
     this._notes = []
+    this._noteModel = noteModel
   }
 
   get notes() {
     return this._notes
   }
 
-  createNote(text) {
-    this._notes.push(new Note(text))
+  createNote(text, model = Note) {
+    this._notes.push(new this._noteModel(text))
   }
 }
 
