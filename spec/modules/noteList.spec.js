@@ -10,5 +10,9 @@ describe('Note List', () => {
   it('is instantiated with an empty array of notes', () => {
     expect(noteList.notes.length).toBe(0)
   })
-  
+
+  it('stores a new note', () => {
+    noteList.createNote('My favourite language is JavaScript')
+    expect(noteList.notes[0]).toEqual('My favourite language is JavaScript')
+  })
 })
