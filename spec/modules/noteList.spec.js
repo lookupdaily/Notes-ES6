@@ -1,3 +1,5 @@
+import NoteList from '../../src/modules/noteList'
+
 describe('Note List', () => {
   let noteList;
 
