@@ -13,6 +13,6 @@ describe('Note List', () => {
 
   it('stores a new note', () => {
     noteList.createNote('My favourite language is JavaScript')
-    expect(noteList.notes[0]).toEqual('My favourite language is JavaScript')
+    expect(noteList.notes[0].text).toEqual('My favourite language is JavaScript')
   })
 })
