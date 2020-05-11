@@ -1,7 +1,7 @@
 import NoteList from '../../src/modules/noteList'
 
 describe('Note List', () => {
-  let noteList;
+  let noteList
 
   beforeEach(() => {
     noteList = new NoteList()
@@ -10,4 +10,5 @@ describe('Note List', () => {
   it('is instantiated with an empty array of notes', () => {
     expect(noteList.notes.length).toBe(0)
   })
+  
 })

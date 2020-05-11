@@ -1,6 +1,10 @@
 class NoteList {
   constructor() {
-    this.notes = []
+    this._notes = []
+  }
+
+  get notes() {
+    return this._notes
   }
 }
 
