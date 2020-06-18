@@ -28,6 +28,7 @@ Documenting my steps below, so I can easily refer back. Feel free to clone and h
 - Test drive a CRUD app from scratch in JavaScript without tutorials
 - A deeper understanding of mocking modules in Jest
 - Use of technologies only by requirement
+- Build features iteratively on a strong foundation, keeping features simple and code clean
 
 ## Future improvements 
 
