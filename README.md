@@ -1,4 +1,4 @@
-# Notes App ES6
+# Recipe Notes App ES6
 
 This is a simple notes app created in ES6, so I can learn how to set up and run a project in ES6. I will be using Test Driven Development, using Jest. 
 
@@ -9,6 +9,32 @@ Documenting my steps below, so I can easily refer back. Feel free to clone and h
 - clone repository and open
 - `brew install yarn`
 - `yarn`
+
+## Functionality
+
+- Create a note
+- Store a note in a list of notes
+- View a list of notes
+- Edit and delete notes
+- Save the list of notes to a database
+- View a list of saved notes
+
+## Learning Objectives
+
+- Build an app in a modular design pattern in modern JavaScript syntax (ES6)
+- Understand how to use JavaScript bundlers such as Webpack and Babel outside of a framework
+- Test drive a CRUD app from scratch in JavaScript without tutorials
+- A deeper understanding of mocking modules in Jest
+- Use of technologies only by requirement
+
+## Future improvements 
+
+This project is a starting point for a bigger project for storing recipes as notes. Extra functionality for this would be:
+
+- Highlighter notes (like in Kindle)
+- Track changes (to see recipe alterations over time)
+- Unit conversions
+- Recipe tags or themed 'cookbooks'
 
 ## How I set it up - step by step
 
