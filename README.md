@@ -12,6 +12,11 @@ Documenting my steps below, so I can easily refer back. Feel free to clone and h
 - `brew install yarn`
 - `yarn`
 
+## Running tests
+
+Tests run in the console using Jest:
+- `yarn test`
+
 ## Functionality
 
 - Create a note
