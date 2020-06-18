@@ -10,7 +10,7 @@ class NoteList {
     return this._notes
   }
 
-  createNote(text, model = Note) {
+  createNote(text) {
     this._notes.push(new this._noteModel(text))
   }
 }
