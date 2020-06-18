@@ -1,6 +1,8 @@
-# Recipe Notes App ES6
+# Recipe Notebook
 
 This is a simple notes app created in ES6, so I can learn how to set up and run a project in ES6. I will be using Test Driven Development, using Jest. 
+
+Once I have built a basic Notes App I will be adding additional features to create an easy-to-use Recipe Notebook. 
 
 Documenting my steps below, so I can easily refer back. Feel free to clone and have a look around.
 
