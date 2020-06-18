@@ -4,26 +4,22 @@ jest.mock('../../src/modules/noteList')
 
 describe('Note List View', () => {
   let noteListView;
+  let noteList;
 
   beforeEach(()=> {
-    NoteList.mockClear()
-  })
-
-  it('calls mock constructor', () => {
-    noteListView = new NoteListView(new NoteList)
-    expect(NoteList).toHaveBeenCalledTimes(1);
-  })
-
-  it('creates a html list of stored notes', () => {
     const notes = [{text: "My Favourite language is javascript"}]
     NoteList.mockImplementation(() => {
       return {
         notes: notes
       }
     })
-    let noteList = new NoteList
+    noteList = new NoteList
     noteListView = new NoteListView(noteList)
+  })
+
+  afterEach(() => NoteList.mockClear())
+
+  it('creates a html list of stored notes', () => {
     expect(noteListView.notesToHTMl()).toEqual('<ul><li><div>My Favourite language is javascript</div></li></ul>')
-    
   })
 })
