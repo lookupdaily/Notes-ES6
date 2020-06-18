@@ -3,10 +3,10 @@ class NoteListView {
     this._noteList = noteList
   }
 
-  get notesToHTMl() {
+  notesToHTMl() {
     let html = '<ul>'
     this._noteList.notes.forEach((note) => {
-      html + `<li><div>${note.text()}</div></li>`
+      html += `<li><div>${note.text}</div></li>`
     })
     return html + '</ul>'
   }
