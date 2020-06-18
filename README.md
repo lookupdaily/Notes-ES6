@@ -21,6 +21,13 @@ Documenting my steps below, so I can easily refer back. Feel free to clone and h
 - Save the list of notes to a database
 - View a list of saved notes
 
+## Edge cases to consider
+
+- A note cannot be created with an empty string
+- A note cannot be updated with an empty string
+- A non-existent note cannot be updated
+- A non-existent note cannot be deleted
+
 ## Learning Objectives
 
 - Build an app in a modular design pattern in modern JavaScript syntax (ES6)
