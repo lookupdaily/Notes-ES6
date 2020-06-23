@@ -1,7 +1,10 @@
-import Note from './modules/note'
+import NoteList from './modules/NoteList'
+import NoteListView from './views/NoteListView'
 
-noteDisplay = document.getElementById('note-container')
 
-note = new Note('my favourite language is javascript')
+const noteDisplay = document.getElementById('notes')
+const noteList = new NoteList()
+const noteListView = new NoteListView(noteList)
 
-noteDisplay.innerHTML = note.text
+noteList.createNote('my favourite language is javascript')
+noteDisplay.innerHTML = noteListView.notesToHTML()

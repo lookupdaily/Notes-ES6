@@ -14,7 +14,8 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "babel src -d lib"
+    "build": "babel src -d public",
+    "start": "node app.js"
   },
   "dependencies": {
     "core-js": "2"
