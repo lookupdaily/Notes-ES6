@@ -59,6 +59,7 @@ This project is a starting point for a bigger project for storing recipes as not
 4. Add the following to package.json
 
 ```json
+//package.json
 "scripts": {
     "test": "jest"
   }
@@ -68,6 +69,23 @@ This project is a starting point for a bigger project for storing recipes as not
 6. Delete test files
 7. Run `jest --init` to create jest configuration file
 8. Run `yarn add --dev babel-jest @babel/core @babel/cli @babel/preset-env` to set up babel
+9. Create 'babel.config.json' file in root folder with the following code:
+
+```json
+//babel.config.json
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]
+}
+```
   
 
 
