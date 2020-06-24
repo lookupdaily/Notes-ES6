@@ -16,8 +16,9 @@ describe('note controller', () => {
 
   it('creates a noteListView with note list', () => {
     const noteList = new NoteList
-    new NoteController(noteList)
+    new NoteController(noteList, NoteListView)
     expect(NoteListView).toHaveBeenCalledWith(noteList)
+    
   })
 
   it('can add a new note to a note list', () => {
@@ -29,7 +30,7 @@ describe('note controller', () => {
 
   it('adding a note re-renders all notes', () => {
     // TODO
-
+  })
   
 
   it('inserts stored notes as HTML', () => {
