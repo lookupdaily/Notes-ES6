@@ -32,12 +32,12 @@ describe('note controller', () => {
   
 
   it('inserts stored notes as HTML', () => {
-    const document = new JSDOM(`<!DOCTYPE html><div id="notes">Hello, world!</div>`).window.document;
-    NoteList.mockImplementation(() => {
-      return {
-        notes: [{text: "my first note"}]
-      };
-    });
+    document.body.innerHTML = `<div id="notes">Hello, world!</div>`
+    // NoteList.mockImplementation(() => {
+    //   return {
+    //     notes: [{text: "my first note"}]
+    //   };
+    // });
     jest.mock('../../src/views/noteListView', () => {
       return jest.fn().mockImplementation(() => {
         return { notesToHTML: jest.fn.mockImplementation(() => {
@@ -47,8 +47,8 @@ describe('note controller', () => {
     })
 
     const noteController = (new NoteController(new NoteList));
-    console.log(document.getElementById('notes').innerHTML)
+    console.log('test', document.getElementById('notes').innerHTML)
     noteController.renderNotes();
-    expect(document.getElementById('notes')).toEqual('<ul><li><div>my first note</div></li></ul>');
+    expect(document.getElementById('notes').innerHTML).toEqual('<ul><li><div>my first note</div></li></ul>');
   })
 })
