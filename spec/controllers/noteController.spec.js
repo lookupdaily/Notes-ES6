@@ -1,7 +1,6 @@
 import NoteList from '../../src/modules/noteList';
 import NoteController from '../../src/controllers/noteController';
 import NoteListView from '../../src/views/noteListView';
-import { JSDOM } from 'jsdom';
 
 jest.mock('../../src/modules/noteList');
 jest.mock('../../src/views/noteListView');
