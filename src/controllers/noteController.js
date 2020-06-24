@@ -1,9 +1,9 @@
 import NoteListView from './../views/noteListView.js'
 
 class NoteController {
-  constructor(noteList) {
+  constructor(noteList, View = NoteListView) {
     this.noteList = noteList
-    this.noteListView = new NoteListView(this.noteList)
+    this.noteListView = new View(this.noteList)
   }
 
   addNote(text) {

@@ -12,7 +12,7 @@ describe('note controller', () => {
   beforeEach(() => {
     document.body.innerHTML = `<div id="notes">Hello, world!</div>`;
     noteList = new NoteList();
-    noteController = (new NoteController(noteList));
+    noteController = (new NoteController(noteList, NoteListView));
   });
 
   afterEach(() => {
