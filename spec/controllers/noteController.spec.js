@@ -11,14 +11,15 @@ describe('note controller', () => {
   let noteController;
 
   beforeEach(() => {
+    document.body.innerHTML = `<div id="notes">Hello, world!</div>`;
     noteList = new NoteList();
     noteController = (new NoteController(noteList));
   });
 
   afterEach(() => {
-    NoteList.mockClear()
-    NoteListView.mockClear()
-  })
+    NoteList.mockClear();
+    NoteListView.mockClear();
+  });
 
   it('creates a noteListView with note list', () => {
     expect(NoteListView).toHaveBeenCalledWith(noteList);
@@ -30,17 +31,21 @@ describe('note controller', () => {
   });
 
   it('adding a note re-renders all notes', () => {
-    // TODO
+    noteController.noteListView.notesToHTMl.mockImplementation(() => {
+      return '<ul><li><div>my first note</div></li></ul>'
+    });
+    
+    noteController.addNote('my first note');
+    expect(document.getElementById('notes').innerHTML).toEqual('<ul><li><div>my first note</div></li></ul>');
   });
   
 
   it('inserts stored notes as HTML', () => {
-    document.body.innerHTML = `<div id="notes">Hello, world!</div>`
     noteController.noteListView.notesToHTMl.mockImplementation(() => {
       return '<ul><li><div>my first note</div></li></ul>'
-    })
+    });
     
     noteController.renderNotes();
     expect(document.getElementById('notes').innerHTML).toEqual('<ul><li><div>my first note</div></li></ul>');
-  })
-})
+  });
+});

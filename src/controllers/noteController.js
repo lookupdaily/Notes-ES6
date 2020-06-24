@@ -8,6 +8,7 @@ class NoteController {
 
   addNote(text) {
     this.noteList.createNote(text)
+    this.renderNotes()
   }
 
   renderNotes() {
