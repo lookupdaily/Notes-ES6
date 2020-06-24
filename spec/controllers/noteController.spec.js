@@ -1,28 +1,36 @@
 import NoteList from '../../src/modules/noteList';
-import NoteController from '../../src/controllers/noteController'
+import NoteController from '../../src/controllers/noteController';
+import NoteListView from '../../src/views/noteListView';
+
 jest.mock('../../src/modules/noteList')
+jest.mock('../../src/views/noteListView')
 
 describe('note controller', () => {
 
-  afterEach(() => NoteList.mockClear())
+  beforeEach(() => NoteList.mockClear())
 
   it('stores a given note list as a parameter', () => {
     const noteController = (new NoteController(new NoteList))
     expect(noteController.noteList).toBeInstanceOf(NoteList)
   })
 
+  it('creates a noteListView with note list', () => {
+    const noteList = new NoteList
+    new NoteController(noteList)
+    expect(NoteListView).toHaveBeenCalledWith(noteList)
+  })
+
   it('can add a new note to a note list', () => {
-    const noteList = {
-      createNote: jest.fn()
-    }
+    const noteList = new NoteList()
     const noteController = (new NoteController(noteList))
     noteController.addNote('new note')
     expect(noteList.createNote).toHaveBeenCalledWith('new note')
   })
 
-  it('creates a noteListView with note list', () => {
-    //TODO
-  })
+  it('adding a note re-renders all notes', () => {
+    // TODO
+
+  
 
   it('inserts stored notes as HTML', () => {
     //TODO
