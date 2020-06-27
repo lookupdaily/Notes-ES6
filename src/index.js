@@ -1,13 +1,8 @@
 import NoteList from './modules/noteList.js'
-import NoteListView from './views/noteListView.js'
+import NoteController from './controllers/noteController.js'
 
 
-const noteDisplay = document.getElementById('notes')
 const noteList = new NoteList()
-const noteListView = new NoteListView(noteList)
+const noteController = new NoteController(noteList)
 
-noteList.createNote('my favourite language is javascript')
-console.log(noteListView)
-console.dir(noteListView)
-console.log(noteListView.notesToHTMl())
-noteDisplay.innerHTML = noteListView.notesToHTMl()
+noteController.addNote('my favourite language is javascript')
